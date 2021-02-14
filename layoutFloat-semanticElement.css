@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style for header */
+  header {
+    background-color: rgb(230, 130, 17);
+    padding: 15px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+  
+  /* Create 3 columns/boxes that floats next to each other */
+
+  /*left sidebar*/
+  nav {
+    float: left;
+    width: 15%;
+    height: 300px;
+    background: rgb(204, 204, 204);
+    padding: 20px;
+  }
+  
+   /*content*/
+  article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px;
+  }
+  
+  /*right sidebar*/
+  aside {
+    float: left;
+    width: 15%;
+    height: 300px;
+    background: #ccc;
+    padding: 20px;
+  }
+  
+  /* Style for footer */
+  footer {
+    background-color: rgb(114, 180, 70);
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+    /* Clear floats after the columns */
+    section:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article, aside {
+      width: 100%;
+      height: auto;
+    }
+  }
